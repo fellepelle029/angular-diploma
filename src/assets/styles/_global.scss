@@ -1,0 +1,27 @@
+body {
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.flex-basis {
+  flex-basis: auto;
+}
+
+.button {
+  text-align: center;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #709FDC;
+  box-sizing: border-box;
+  color: #FFF;
+  font-family: Montserrat, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+}
