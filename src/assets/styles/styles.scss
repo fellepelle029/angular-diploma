@@ -48,5 +48,26 @@ table {
   border-spacing: 0;
 }
 
+app-main {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
+}
+
+.owl-dots {
+  position: absolute;
+  bottom: 15px;
+  right: 585px;
+}
+
+.owl-theme .owl-dot span {
+  border: 1px solid white;
+  background: transparent !important;
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: white !important;
+}
 
 /* Importing Bootstrap SCSS file. */

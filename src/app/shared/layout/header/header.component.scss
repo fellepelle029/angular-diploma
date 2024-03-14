@@ -1,13 +1,14 @@
 .header {
   padding: 40px 0;
 
-  .container {
+  .container-wrapper {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     .menu {
       ul {
-        margin-left: 100px;
+        margin-left: 40px;
         display: flex;
         align-items: center;
         color: #071739;
@@ -47,6 +48,7 @@
     .login {
       display: flex;
       align-items: center;
+
       font-weight: 500;
       cursor: pointer;
 
