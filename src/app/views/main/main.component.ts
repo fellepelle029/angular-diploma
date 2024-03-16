@@ -4,6 +4,7 @@ import {OwlOptions} from "ngx-owl-carousel-o";
 import {ArticlesType} from "../../../types/articles.type";
 import {ArticlesService} from "../../shared/services/articles.service";
 import {environment} from "../../../environments/environment";
+import {PopupService} from "../../shared/services/popup.service";
 
 @Component({
   selector: 'app-main',
@@ -38,6 +39,9 @@ export class MainComponent implements OnInit {
       price: 750,
     },
   ];
+  selectedOffer!: OffersType;
+
+
   reviews: { image: string, name: string, review: string }[] = [
     {
       image: 'review-1.png',
@@ -98,17 +102,24 @@ export class MainComponent implements OnInit {
   popularArticles: ArticlesType[] = [];
 
 
-  constructor(private articlesService: ArticlesService) {
+  constructor(private articlesService: ArticlesService,
+              public popupService: PopupService) {
   }
 
   ngOnInit(): void {
+    this.getPopularArticles()
+  }
+
+  openPopup(offerTitle: string) {
+    this.popupService.setCallbackPopupOpen(false)
+    this.popupService.openPopup()
+    this.popupService.setOfferTitle(offerTitle);
+  }
+
+  getPopularArticles() {
     this.articlesService.getPopularArticles()
       .subscribe((articles: ArticlesType[]) => {
         this.popularArticles = articles as ArticlesType[];
       });
-  }
-
-  getPopularArticles() {
-
   }
 }

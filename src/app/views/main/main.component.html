@@ -1,5 +1,7 @@
+
 <section class="main">
   <div class="container-wrapper">
+
 
 
     <div class="main-slider">
@@ -59,7 +61,7 @@
           <div class="card-description">{{offer.description}}</div>
           <div class="card-action">
             <div class="card-price">От {{offer.price}}₽</div>
-            <button class="button">Подробнее</button>
+            <button class="button" (click)="openPopup(offer.title)">Подробнее</button>
           </div>
         </div>
       </div>

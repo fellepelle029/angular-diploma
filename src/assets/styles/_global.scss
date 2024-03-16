@@ -24,4 +24,28 @@ body {
   font-size: 12px;
   font-weight: 500;
   cursor: pointer;
+
+  &:disabled {
+    background: gray;
+    cursor: not-allowed;
+  }
+
 }
+
+
+.form-input {
+  border-radius: 3px;
+  border: 2px solid #709FDC;
+  background: #FFF;
+  padding: 20px ;
+  color: #709FDC;
+  outline: none;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+
+  &::placeholder {
+    color: #A8ABA7;
+  }
+}
+
