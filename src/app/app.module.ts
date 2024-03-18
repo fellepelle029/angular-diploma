@@ -14,7 +14,10 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {CarouselModule} from "ngx-owl-carousel-o";
 import {PopupComponent} from "./shared/components/popup/popup.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {MatSnackBarModule} from "@angular/material/snack-bar";
+import {MAT_SNACK_BAR_DEFAULT_OPTIONS, MatSnackBarModule} from "@angular/material/snack-bar";
+import {HTTP_INTERCEPTORS} from "@angular/common/http";
+import {AuthInterceptor} from "./core/auth/auth.interceptor";
+import {MatMenuModule} from "@angular/material/menu";
 
 @NgModule({
   declarations: [
@@ -34,10 +37,14 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
     NgbModule,
     BrowserAnimationsModule,
     MatSnackBarModule,
+    MatMenuModule,
     CarouselModule,
     RouterModule,
   ],
-  providers: [],
+  providers: [
+    {provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {duration: 2500}},
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

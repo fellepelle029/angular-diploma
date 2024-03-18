@@ -1,0 +1,79 @@
+@import "fonts";
+@import "variables";
+
+.auth-form {
+
+  .auth-title {
+    color: #709FDC;
+    font-family: Lora, sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 40px;
+  }
+
+  .auth-inputs {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+
+    .form-input {
+      margin-bottom: 5px;
+      width: 422px;
+      height: 53px;
+    }
+
+    .auth-checkbox {
+      margin-top: 5px;
+      max-width: 422px;
+      display: flex;
+      align-items: baseline;
+
+      input {
+        border: 1px solid #071739;
+        margin: 0;
+      }
+
+      label {
+        margin-left: 10px;
+        color: #071739;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 130%;
+
+        a {
+          color: #709FDC;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .auth-button {
+    margin-top: 40px;
+
+    button.button {
+      width: 422px;
+      height: 51px;
+      color: #FFF;
+      font-weight: 400;
+      font-size: 16px;
+    }
+  }
+
+  .auth-link {
+    margin-top: 10px;
+    color: #1E1A2B;
+    font-size: 14px;
+
+    a {
+      margin-left: 5px;
+      color: #709FDC;
+      text-decoration: none;
+    }
+  }
+}
+
+
+
+

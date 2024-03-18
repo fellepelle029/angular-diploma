@@ -1,0 +1,18 @@
+@import "src/assets/styles/auth-form";
+
+.login {
+  padding: 106px 0 92px;
+
+  .container-wrapper {
+    display: flex;
+    align-items: center;
+
+    .page-image {
+      width: 607px;
+      height: 390px;
+      margin-left: 185px;
+      display: flex;
+    }
+  }
+
+}
