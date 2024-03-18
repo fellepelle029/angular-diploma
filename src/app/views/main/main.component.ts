@@ -39,7 +39,6 @@ export class MainComponent implements OnInit {
       price: 750,
     },
   ];
-  selectedOffer!: OffersType;
 
 
   reviews: { image: string, name: string, review: string }[] = [

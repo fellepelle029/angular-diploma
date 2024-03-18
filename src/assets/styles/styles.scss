@@ -23,22 +23,29 @@ time, mark, audio, video {
   vertical-align: baseline;
 
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, main, menu, nav, section {
   display: block;
 }
+
 /* HTML5 hidden-attribute fix for newer browsers */
 *[hidden] {
   display: none;
 }
+
 body {
   line-height: 1;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
 }
+
 menu, ol, ul {
   list-style: none;
 
 }
+
 blockquote, q {
   quotes: none;
 }
@@ -70,8 +77,3 @@ app-main {
   background: white !important;
 }
 
-
-/* Importing Bootstrap SCSS file. */
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
