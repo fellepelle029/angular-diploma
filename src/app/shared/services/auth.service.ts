@@ -104,4 +104,8 @@ export class AuthService {
     });
     return this.http.get<UserInfo>(environment.api + 'users', { headers });
   }
+
+  setUserName(userName: string): void {
+    this.userName$.next(userName);
+  }
 }
