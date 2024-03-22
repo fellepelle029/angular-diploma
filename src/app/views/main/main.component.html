@@ -129,7 +129,7 @@
       </div>
 
       <div class="popular-link-to">
-        <a href="">Перейти в блог
+        <a routerLink="blog">Перейти в блог
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
             <path
               d="M5.44392 1C5.59871 1 5.75349 1.05652 5.87569 1.17765L11.1873 6.44254C12.0508 7.29849 12.0508 8.70353 11.1873 9.55948L5.87569 14.8244C5.63944 15.0585 5.2484 15.0585 5.01215 14.8244C4.7759 14.5902 4.7759 14.2026 5.01215 13.9684L10.3238 8.70353C10.7148 8.31593 10.7148 7.68608 10.3238 7.29849L5.01215 2.0336C4.7759 1.79942 4.7759 1.41182 5.01215 1.17765C5.13435 1.0646 5.28914 1 5.44392 1Z"
@@ -143,7 +143,8 @@
       <div class="reviews-title">Отзывы о нашей работе</div>
 
       <div class="reviews-items">
-        <owl-carousel-o [options]="reviewSlider">
+        <div class="reviews-arrow review-arrow-left review-al" (click)="reviewsCar.prev()"></div>
+        <owl-carousel-o [options]="reviewSlider" #reviewsCar>
           <ng-template carouselSlide *ngFor="let review of reviews">
             <div class="review-item">
               <div class="review-item-user">
@@ -156,6 +157,8 @@
             </div>
           </ng-template>
         </owl-carousel-o>
+        <div class="reviews-arrow review-ar" (click)="reviewsCar.next()"></div>
+
       </div>
     </div>
 

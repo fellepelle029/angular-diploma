@@ -77,7 +77,7 @@ export class MainComponent implements OnInit {
   reviewSlider: OwlOptions = {
     loop: true,
     mouseDrag: true,
-    margin: 25,
+    margin: 24,
     touchDrag: true,
     pullDrag: true,
     dots: false,

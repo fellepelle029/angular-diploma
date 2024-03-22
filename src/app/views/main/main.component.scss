@@ -340,9 +340,27 @@
 
       .reviews-items {
         position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+
+        .reviews-arrow {
+          position: absolute;
+          cursor: pointer;
+          top: 50%;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          width: 10px;
+          height: 19px;
+
+          &.review-al {
+            left: -25px;
+            background-image: url("../../../assets/images/blog/pagination-al.png");
+          }
+
+          &.review-ar {
+            right: -25px;
+            background-image: url("../../../assets/images/blog/pagination-ar.png");
+          }
+        }
 
         .review-item {
           padding: 30px;
