@@ -1,0 +1,11 @@
+<div class="blog-card">
+  <div class="card-image" style="background-image: url({{serverStaticPath + article.image}})">
+    <div class="card-image-category">{{article.category}}</div>
+  </div>
+  <div class="card-title">{{article.title | truncateHeader}}</div>
+  <div class="card-description">{{article.description | truncate}}
+  </div>
+  <div class="card-action">
+    <a href="#">Читать дальше</a>
+  </div>
+</div>

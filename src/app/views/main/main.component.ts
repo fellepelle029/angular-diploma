@@ -39,8 +39,6 @@ export class MainComponent implements OnInit {
       price: 750,
     },
   ];
-
-
   reviews: { image: string, name: string, review: string }[] = [
     {
       image: 'review-1.png',
@@ -58,7 +56,6 @@ export class MainComponent implements OnInit {
       review: 'Команда АйтиШторма за такой короткий промежуток времени сделала невозможное: от простой фирмы по услуге продвижения выросла в мощный блог о важности личного бренда. Класс!',
     },
   ]
-
   mainSlider: OwlOptions = {
     loop: true,
     mouseDrag: true,
@@ -77,7 +74,6 @@ export class MainComponent implements OnInit {
     },
     nav: false
   }
-
   reviewSlider: OwlOptions = {
     loop: true,
     mouseDrag: true,

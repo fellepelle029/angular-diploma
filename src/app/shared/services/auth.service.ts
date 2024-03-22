@@ -16,15 +16,10 @@ export class AuthService {
   public userIdKey: string = 'userId';
   public isLogged$: Subject<boolean> = new Subject<boolean>();
   private isLogged: boolean = false;
-
   public userName$: Subject<string> = new Subject<string>();
 
   constructor(private http: HttpClient) {
     this.isLogged = !!localStorage.getItem(this.accessTokenKey);
-  }
-
-  setUserName(userName: string) {
-    this.userName$.next(userName);
   }
 
   login(email: string, password: string, rememberMe: boolean): Observable<DefaultResponseType | LoginResponseType> {
@@ -57,7 +52,6 @@ export class AuthService {
   public isLoggedIn() {
     return this.isLogged;
   }
-
 
   public setTokens(accessToken: string, refreshToken: string): void {
     localStorage.setItem(this.accessTokenKey, accessToken);

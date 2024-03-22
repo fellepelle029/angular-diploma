@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
 
   isLogged: boolean = false;
 
-  constructor(private authService: AuthService,
+  constructor(public authService: AuthService,
               private _snackbar: MatSnackBar,
               private router: Router) {
     this.isLogged = this.authService.isLoggedIn();
@@ -27,7 +27,7 @@ export class HeaderComponent implements OnInit {
     });
 
     this.authService.getUsername(localStorage.getItem(this.authService.accessTokenKey)!).subscribe((data: UserInfo) => {
-      this.authService.setUserName(data.name);
+      this.userName = data.name;
     });
 
     this.authService.userName$.subscribe((userName: string) => {
