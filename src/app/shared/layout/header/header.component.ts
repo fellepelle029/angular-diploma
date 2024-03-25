@@ -22,16 +22,14 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
     this.authService.isLogged$.subscribe((isLoggedIn: boolean) => {
       this.isLogged = isLoggedIn;
       if (this.isLogged) {
-        this.authService.getUsername(localStorage.getItem(this.authService.accessTokenKey)!).subscribe((data: UserInfo) => {
-          this.authService.setUserName(data.name);
-        });
+        this.setUsername();
       }
     });
-
-
+    this.setUsername();
 
     this.authService.userName$.subscribe((userName: string) => {
       this.userName = userName;
@@ -56,6 +54,12 @@ export class HeaderComponent implements OnInit {
     this.authService.userId = null;
     this._snackbar.open('Вы вышли из системы');
     this.router.navigate(['/']);
+  }
+
+  setUsername() {
+    return this.authService.getUsername(localStorage.getItem(this.authService.accessTokenKey)!).subscribe((data: UserInfo) => {
+      this.authService.setUserName(data.name);
+    });
   }
 
 }
