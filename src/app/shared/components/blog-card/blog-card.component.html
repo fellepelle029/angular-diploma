@@ -6,6 +6,6 @@
   <div class="card-description">{{article.description | truncate}}
   </div>
   <div class="card-action">
-    <a href="#">Читать дальше</a>
+    <a [routerLink]="'/blog/' + article.url" >Читать дальше</a>
   </div>
 </div>

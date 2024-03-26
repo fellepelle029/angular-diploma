@@ -1,0 +1,33 @@
+@import "../../../../assets/styles/global";
+
+.article {
+  padding: 80px 0 120px;
+
+  .container-wrapper {
+    position: relative;
+
+    .article-sub-header {
+      color: #B9D5FD;
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 60px;
+
+      a {
+        cursor: pointer;
+      }
+
+      .slash {
+        margin: 0 8px;
+        font-family: "Suisse Intl", sans-serif;
+        font-size: 14px;
+      }
+
+      .sub-header-title {
+        color: #709FDC;
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+
+  }
+}

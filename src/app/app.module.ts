@@ -19,6 +19,7 @@ import {HTTP_INTERCEPTORS} from "@angular/common/http";
 import {AuthInterceptor} from "./core/auth/auth.interceptor";
 import {MatMenuModule} from "@angular/material/menu";
 import {NgOptimizedImage} from "@angular/common";
+import {CookieService} from "ngx-cookie-service";
 
 @NgModule({
   declarations: [

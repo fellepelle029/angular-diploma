@@ -55,7 +55,7 @@ table {
   border-spacing: 0;
 }
 
-app-main, app-login, app-signup, app-blog {
+app-main, app-login, app-signup, app-blog, app-article {
   flex-grow: 1;
   flex-shrink: 0;
   flex-basis: auto;
@@ -77,3 +77,84 @@ app-main, app-login, app-signup, app-blog {
   background: white !important;
 }
 
+.article-text {
+  float: left;
+
+  h1 {
+    color: #709FDC;
+    font-family: Lora, sans-serif;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    margin-bottom: 40px;
+    max-width: 607px;
+  }
+
+  h1 + p {
+    max-width: 607px;
+    color: #709FDC;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 130%;
+    margin-bottom: 112px;
+  }
+
+  h3 {
+    color: #709FDC;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 130%;
+    margin-bottom: 20px;
+  }
+
+  p {
+    color: #071739;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    margin-bottom: 20px;
+    max-width: 818px;
+  }
+}
+
+.article-float-right {
+  float: right;
+
+  .article-image {
+    width: 527px;
+    height: 320px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    margin-bottom: 120px;
+  }
+
+  .article-related {
+    width: 280px;
+    float: right;
+
+    .related-title {
+      color: #709FDC;
+      font-family: Lora, sans-serif;
+      font-size: 26px;
+      font-weight: 400;
+      margin-bottom: 20px;
+
+    }
+
+    .related-cards {
+      position: relative;
+      top: 0;
+      right: 0;
+
+      .blog-card {
+        margin-bottom: 60px;
+      }
+    }
+  }
+}
