@@ -5,6 +5,7 @@ import {ArticlesType} from "../../../../types/articles.type";
 import {ArticleType} from "../../../../types/article.type";
 import {environment} from "../../../../environments/environment";
 import {Location} from "@angular/common";
+import {AuthService} from "../../../shared/services/auth.service";
 
 @Component({
   selector: 'app-article',
@@ -18,10 +19,14 @@ export class ArticleComponent implements OnInit {
   serverStaticPath: string = environment.serverStaticPath;
   relatedArticles: ArticlesType[] = [];
 
+  isLogged: boolean = false;
+
+
   constructor(private activatedRoute: ActivatedRoute,
               private articlesService: ArticlesService,
-              private location: Location,) {
-  }
+              private location: Location,
+              private authService: AuthService)
+  { this.isLogged = this.authService.isLoggedIn(); }
 
   ngOnInit(): void {
     this.loadArticle();
