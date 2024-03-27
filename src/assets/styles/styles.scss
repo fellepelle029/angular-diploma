@@ -78,8 +78,7 @@ app-main, app-login, app-signup, app-blog, app-article {
 }
 
 .article-text {
-  float: left;
-
+  margin-top: -9px;
   h1 {
     color: #709FDC;
     font-family: Lora, sans-serif;
@@ -121,40 +120,40 @@ app-main, app-login, app-signup, app-blog, app-article {
   }
 }
 
-.article-float-right {
+.article-image {
+  float: right;
+  width: 527px;
+  height: 320px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  margin-right: -290px;
+}
+
+
+.article-related {
+  margin-top: 400px;
+  width: 280px;
   float: right;
 
-  .article-image {
-    width: 527px;
-    height: 320px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 5px;
-    margin-bottom: 120px;
+  .related-title {
+    color: #709FDC;
+    font-family: Lora, sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+    margin-bottom: 20px;
+
   }
 
-  .article-related {
-    width: 280px;
-    float: right;
+  .related-cards {
+    position: relative;
+    top: 0;
+    right: 0;
 
-    .related-title {
-      color: #709FDC;
-      font-family: Lora, sans-serif;
-      font-size: 26px;
-      font-weight: 400;
-      margin-bottom: 20px;
-
-    }
-
-    .related-cards {
-      position: relative;
-      top: 0;
-      right: 0;
-
-      .blog-card {
-        margin-bottom: 60px;
-      }
+    .blog-card {
+      margin-bottom: 60px;
     }
   }
 }
+
