@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import {LayoutComponent} from "./shared/layout/layout.component";
 import {MainComponent} from "./views/main/main.component";
 import {AuthForwardGuard} from "./core/auth/auth-forward.guard";
+import {PoliticsComponent} from "./views/politics/politics.component";
 
 const routes: Routes = [
   {
@@ -10,6 +11,7 @@ const routes: Routes = [
     component: LayoutComponent,
     children: [
       {path: '', component: MainComponent},
+      {path: 'politics', component: PoliticsComponent},
       {path: '', loadChildren: () => import('./views/user/user.module').then(m => m.UserModule), canActivate: [AuthForwardGuard]},
       {path: '', loadChildren: () => import('./views/blog/blog.module').then(m => m.BlogModule)},
     ]

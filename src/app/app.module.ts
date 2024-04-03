@@ -20,6 +20,7 @@ import {AuthInterceptor} from "./core/auth/auth.interceptor";
 import {MatMenuModule} from "@angular/material/menu";
 import {NgOptimizedImage} from "@angular/common";
 import {NgxMaskModule} from "ngx-mask";
+import { PoliticsComponent } from './views/politics/politics.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import {NgxMaskModule} from "ngx-mask";
     PopupComponent,
     LayoutComponent,
     MainComponent,
+    PoliticsComponent,
   ],
   imports: [
     NgxMaskModule.forRoot(),
