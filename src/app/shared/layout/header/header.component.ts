@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {AuthService} from "../../services/auth.service";
-import {Router} from "@angular/router";
+import { Router} from "@angular/router";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {UserInfo} from "../../../../types/user-info";
 
@@ -17,6 +17,8 @@ export class HeaderComponent implements OnInit {
 
   isLogged: boolean = false;
 
+  isFragmentActive: boolean = true;
+
   constructor(public authService: AuthService,
               private _snackbar: MatSnackBar,
               private router: Router) {
@@ -24,7 +26,6 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
     this.authService.isLogged$.subscribe((isLoggedIn: boolean) => {
       this.isLogged = isLoggedIn;
       if (this.isLogged) {
@@ -62,6 +63,10 @@ export class HeaderComponent implements OnInit {
     return this.authService.getUsername(localStorage.getItem(this.authService.accessTokenKey)!).subscribe((data: UserInfo) => {
       this.authService.setUserName(data.name);
     });
+  }
+
+  isActive(fragment: string): boolean {
+    return this.isFragmentActive && this.router.url.includes(`#${fragment}`);
   }
 
 }

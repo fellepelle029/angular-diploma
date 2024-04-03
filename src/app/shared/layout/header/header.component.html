@@ -7,11 +7,11 @@
 
     <nav class="menu">
       <ul>
-        <li><a routerLink="/" fragment="offers">Услуги</a></li>
-        <li><a routerLink="/" fragment="about">О нас</a></li>
-        <li><a routerLink="/blog">Статьи</a></li>
-        <li><a routerLink="/" fragment="reviews">Отзывы</a></li>
-        <li><a routerLink="/" fragment="contacts">Контакты</a></li>
+        <li><a routerLink="/" fragment="offers" [class.active-link]="isActive('offers')">Услуги</a></li>
+        <li><a routerLink="/" fragment="about" [class.active-link]="isActive('about')">О нас</a></li>
+        <li><a routerLink="/blog" routerLinkActive="active-link">Статьи</a></li>
+        <li><a routerLink="/" fragment="reviews" [class.active-link]="isActive('reviews')">Отзывы</a></li>
+        <li><a routerLink="/" fragment="contacts" [class.active-link]="isActive('contacts')">Контакты</a></li>
       </ul>
     </nav>
 

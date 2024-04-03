@@ -39,7 +39,13 @@
             &:hover {
               color: #709FDC;
             }
+
+            &.active-link {
+              color: #709FDC;
+            }
+
           }
+
 
           &:last-child {
             margin-right: 257px;
