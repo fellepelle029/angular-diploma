@@ -17,10 +17,14 @@
                [ngStyle]="{'border-color': popupForm.get('name')?.invalid
                  && (popupForm.get('name')?.dirty || popupForm.get('name')?.touched)
                  ? 'red' : ''}">
+        <span class="validation-error" *ngIf="popupForm.get('name')?.invalid
+          && (popupForm.get('name')?.dirty || popupForm.get('name')?.touched)">Обязательное поле. Имя должно состоять из букв.</span>
         <input class="form-input" formControlName="phone" type="text" placeholder="Ваш номер телефона"
                [ngStyle]="{'border-color': popupForm.get('phone')?.invalid
                  && (popupForm.get('phone')?.dirty || popupForm.get('phone')?.touched)
-                 ? 'red' : ''}">
+                 ? 'red' : ''}" mask="+0(000)000-00-00">
+        <span class="validation-error" *ngIf="popupForm.get('phone')?.invalid
+          && (popupForm.get('phone')?.dirty || popupForm.get('phone')?.touched)">Обязательное поле. Формат телефона +7 (***) ***-**-**</span>
         <button class="button" [disabled]="popupForm.invalid">Оставить заявку</button>
       </form>
     </div>
@@ -33,10 +37,14 @@
                [ngStyle]="{'border-color': callbackForm.get('name')?.invalid
                  && (callbackForm.get('name')?.dirty || callbackForm.get('name')?.touched)
                  ? 'red' : ''}">
+        <span class="validation-error" *ngIf="callbackForm.get('name')?.invalid
+          && (callbackForm.get('name')?.dirty || callbackForm.get('name')?.touched)">Обязательное поле. Имя должно состоять из букв.</span>
         <input class="form-input" formControlName="phone" type="text" placeholder="Ваш номер телефона"
                [ngStyle]="{'border-color': callbackForm.get('phone')?.invalid
                  && (callbackForm.get('phone')?.dirty || callbackForm.get('phone')?.touched)
-                 ? 'red' : ''}">
+                 ? 'red' : ''}" mask="+0(000)000-00-00">
+        <span class="validation-error" *ngIf="callbackForm.get('phone')?.invalid
+          && (callbackForm.get('phone')?.dirty || callbackForm.get('phone')?.touched)">Обязательное поле. Формат телефона +7 (***) ***-**-**</span>
         <button class="button" [disabled]="callbackForm.invalid">Заказать консультацию</button>
       </form>
     </div>

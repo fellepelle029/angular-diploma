@@ -117,4 +117,9 @@ export class MainComponent implements OnInit {
         this.popularArticles = articles as ArticlesType[];
       });
   }
+
+  openCallbackPopup() {
+    this.popupService.openPopup();
+    this.popupService.setCallbackPopupOpen(true);
+  }
 }

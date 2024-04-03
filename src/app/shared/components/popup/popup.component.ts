@@ -24,8 +24,8 @@ export class PopupComponent {
 
     this.popupForm = this.fb.group({
       service: [{ value: '' }],
-      name: ['', Validators.required],
-      phone: ['', Validators.required],
+      name: ['', [Validators.required, Validators.pattern('[а-яА-ЯЁёa-zA-Z]+')]],
+      phone: ['+7', [Validators.required, Validators.pattern('^\\+?[0-9]{1,3}\\(?[0-9]{3}\\)?[0-9]{3}-?[0-9]{2}-?[0-9]{2}$')]],
       type: ['order'],
     });
     this.popupService.offerTitle.subscribe(title => {
@@ -34,8 +34,8 @@ export class PopupComponent {
 
 
     this.callbackForm = this.fb.group({
-      name: ['', Validators.required],
-      phone: ['', Validators.required],
+      name: ['', [Validators.required, Validators.pattern('[а-яА-ЯЁёa-zA-Z]+')]],
+      phone: ['+7', [Validators.required, Validators.pattern('^\\+?[0-9]{1,3}\\(?[0-9]{3}\\)?[0-9]{3}-?[0-9]{2}-?[0-9]{2}$')]],
       type: ['consultation']
     })
   }

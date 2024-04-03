@@ -15,7 +15,7 @@
               <div class="main-slider-item-subtitle">Предложение месяца</div>
               <div class="main-slider-item-title">Продвижение в Instagram для вашего бизнеса <span>-15%</span>!
               </div>
-              <button class="button mt-4">Подробнее</button>
+              <button class="button mt-4" (click)="openCallbackPopup()">Подробнее</button>
             </div>
           </div>
         </ng-template>
@@ -29,7 +29,7 @@
               </div>
               <div class="main-slider-item-additional-text">Весь декабрь у нас действует акция на работу копирайтера.
               </div>
-              <button class="button">Подробнее</button>
+              <button class="button" (click)="openCallbackPopup()">Подробнее</button>
             </div>
           </div>
         </ng-template>
@@ -41,7 +41,7 @@
               <div class="main-slider-item-subtitle">Новость дня</div>
               <div class="main-slider-item-title">6 место <span>в ТОП-10 SMM-агенств Москвы!</span></div>
               <div class="main-slider-item-additional-text">Мы благодарим каждого, кто голосовал за нас!</div>
-              <button class="button">Подробнее</button>
+              <button class="button" (click)="openCallbackPopup()">Подробнее</button>
             </div>
           </div>
         </ng-template>
@@ -51,7 +51,7 @@
     </div>
 
 
-    <div class="offers">
+    <div class="offers" id="offers">
       <div class="offers-title">Услуги, которые мы предлагаем</div>
       <div class="offers-cards card-group flex-nowrap">
         <div class="offers-card" *ngFor="let offer of offers">
@@ -66,7 +66,7 @@
       </div>
     </div>
 
-    <div class="about">
+    <div class="about" id="about">
       <div class="about-image"></div>
 
       <div class="about-info">
@@ -139,7 +139,7 @@
       </div>
     </div>
 
-    <div class="reviews">
+    <div class="reviews" id="reviews">
       <div class="reviews-title">Отзывы о нашей работе</div>
 
       <div class="reviews-items">
@@ -162,7 +162,7 @@
       </div>
     </div>
 
-    <div class="contacts">
+    <div class="contacts" id="contacts">
       <div class="contacts-map">
         <iframe
           src="https://yandex.ru/map-widget/v1/?um=constructor%3A744acdfbf2aeb321dc8fa77188d9a1e5da1eb3a7a569fede5ecda2ae2bd785fd&amp;source=constructor"
