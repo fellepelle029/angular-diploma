@@ -77,83 +77,45 @@ app-main, app-login, app-signup, app-blog, app-article {
   background: white !important;
 }
 
-.article-text {
-  margin-top: -9px;
-  h1 {
-    color: #709FDC;
-    font-family: Lora, sans-serif;
-    font-size: 38px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 130%;
-    margin-bottom: 40px;
-    max-width: 607px;
-  }
+.article-body {
+  .article-text {
+    h1 {
+      color: #709FDC;
+      font-family: Montserrat, sans-serif;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 130%;
+      margin-bottom: 20px;
+    }
 
-  h1 + p {
-    max-width: 607px;
-    color: #709FDC;
-    font-family: Montserrat, sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 130%;
-    margin-bottom: 112px;
-  }
+    h3 {
+      color: #709FDC;
+      font-family: Montserrat, sans-serif;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 130%;
+      margin-bottom: 20px;
+    }
 
-  h3 {
-    color: #709FDC;
-    font-family: Montserrat, sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 130%;
-    margin-bottom: 20px;
-  }
-
-  p {
-    color: #071739;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 130%;
-    margin-bottom: 20px;
-    max-width: 818px;
-  }
-}
-
-.article-image {
-  float: right;
-  width: 527px;
-  height: 320px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 5px;
-  margin-right: -290px;
-}
-
-
-.article-related {
-  margin-top: 400px;
-  width: 280px;
-  float: right;
-
-  .related-title {
-    color: #709FDC;
-    font-family: Lora, sans-serif;
-    font-size: 26px;
-    font-weight: 400;
-    margin-bottom: 20px;
-
-  }
-
-  .related-cards {
-    position: relative;
-    top: 0;
-    right: 0;
-
-    .blog-card {
-      margin-bottom: 60px;
+    p {
+      color: #071739;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%;
+      margin-bottom: 20px;
+      max-width: 818px;
     }
   }
 }
+
+.article-related {
+  .blog-card {
+    margin-bottom: 60px;
+  }
+}
+
+
+
+
 
