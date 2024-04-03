@@ -1,5 +1,17 @@
 .header {
   padding: 40px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  background-color: #fff;
+  width: 100%;
+  transition: box-shadow 0.15s linear;
+
+  &.scrolled {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  }
 
   .container-wrapper {
     display: flex;
