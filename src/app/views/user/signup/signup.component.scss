@@ -1,4 +1,4 @@
-@import "src/assets/styles/auth-form";
+@import "../../../../assets/styles/auth-form";
 
 .signup {
   padding: 123px 0 120px;
@@ -13,10 +13,21 @@
         margin-bottom: 45px;
       }
 
+      .auth-inputs {
+        .validation-error {
+          width: 422px;
+          color: red;
+          font-size: 12px;
+          margin-bottom: 10px;
+          text-align: center;
+        }
+      }
+
       .auth-checkbox {
         align-items: baseline;
       }
     }
+
     .page-image {
       width: 607px;
       height: 390px;
@@ -28,6 +39,7 @@
   .auth-link {
     max-width: 1240px;
     margin: 10px auto 0;
+
     a {
       margin-left: 5px;
       color: #709FDC;

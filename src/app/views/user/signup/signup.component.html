@@ -8,16 +8,22 @@
                [ngStyle]="{'border-color': signupForm.get('name')?.invalid
                  && (signupForm.get('name')?.dirty || signupForm.get('name')?.touched)
                  ? 'red' : ''}">
-
+        <span class="validation-error" *ngIf="signupForm.get('name')?.invalid
+          && (signupForm.get('name')?.dirty || signupForm.get('name')?.touched)">Обязательное поле. Имя должно состоять из букв.</span>
         <input type="text" class="form-input" placeholder="Электронная почта" formControlName="email"
                [ngStyle]="{'border-color': signupForm.get('email')?.invalid
                  && (signupForm.get('email')?.dirty || signupForm.get('email')?.touched)
                  ? 'red' : ''}">
+        <span class="validation-error" *ngIf="signupForm.get('email')?.invalid
+          && (signupForm.get('email')?.dirty || signupForm.get('email')?.touched)">Обязательное поле. Введите корректную почту.</span>
 
         <input type="password" class="form-input" placeholder="Пароль" formControlName="password"
                [ngStyle]="{'border-color': signupForm.get('password')?.invalid
                  && (signupForm.get('password')?.dirty || signupForm.get('password')?.touched)
                  ? 'red' : ''}">
+        <span class="validation-error" *ngIf="signupForm.get('password')?.invalid
+          && (signupForm.get('password')?.dirty || signupForm.get('password')?.touched)">Обязательное поле. Пароль должен состоять из одной заглавой и прописной букв и цифр. Минимум 8 знаков.</span>
+
 
         <div class="auth-checkbox">
           <input type="checkbox" id="agree" formControlName="agree">

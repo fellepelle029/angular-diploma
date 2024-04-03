@@ -1,4 +1,4 @@
-@import "src/assets/styles/auth-form";
+@import "../../../../assets/styles/auth-form";
 
 .login {
   padding: 106px 0 92px;
@@ -6,6 +6,16 @@
   .container-wrapper {
     display: flex;
     align-items: center;
+
+    .auth-inputs {
+      .validation-error {
+        width: 422px;
+        color: red;
+        font-size: 12px;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+    }
 
     .page-image {
       width: 607px;

@@ -7,18 +7,21 @@
 
       <div class="auth-inputs">
 
-          <input type="text" class="form-input" placeholder="Электронная почта"
-                 [ngStyle]="{'border-color': loginForm.get('email')?.invalid
+        <input type="text" class="form-input" placeholder="Электронная почта"
+               [ngStyle]="{'border-color': loginForm.get('email')?.invalid
                  && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)
                  ? 'red' : ''}"
-                 formControlName="email">
+               formControlName="email">
+        <span class="validation-error" *ngIf="loginForm.get('email')?.invalid
+          && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)">Обязательное поле.</span>
 
-
-          <input type="password" class="form-input" placeholder="Пароль"
-                 [ngStyle]="{'border-color': loginForm.get('password')?.invalid
+        <input type="password" class="form-input" placeholder="Пароль"
+               [ngStyle]="{'border-color': loginForm.get('password')?.invalid
                  && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)
                  ? 'red' : ''}"
-                 formControlName="password">
+               formControlName="password">
+        <span class="validation-error" *ngIf="loginForm.get('password')?.invalid
+          && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)">Обязательное поле.</span>
 
         <div class="auth-checkbox">
           <input type="checkbox" id="remember" formControlName="rememberMe">
