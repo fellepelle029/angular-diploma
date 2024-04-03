@@ -5,6 +5,7 @@ import {BlogRoutingModule} from './blog-routing.module';
 import {BlogComponent} from './blog/blog.component';
 import {SharedModule} from "../../shared/shared.module";
 import { ArticleComponent } from './article/article.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -12,11 +13,12 @@ import { ArticleComponent } from './article/article.component';
     BlogComponent,
     ArticleComponent
   ],
-  imports: [
-    CommonModule,
-    SharedModule,
-    BlogRoutingModule,
-  ]
+    imports: [
+        CommonModule,
+        SharedModule,
+        BlogRoutingModule,
+        ReactiveFormsModule,
+    ]
 })
 export class BlogModule {
 }

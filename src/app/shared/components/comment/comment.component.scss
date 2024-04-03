@@ -1,0 +1,92 @@
+.comment {
+  width: 854px;
+  margin-bottom: 40px;
+
+  .comment-head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+
+    .comment-head-userimage {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      border: 2px solid #709FDC;
+      border-radius: 50%;
+      box-sizing: border-box;
+      background-color: #B9D5FD;
+      // если загрузят фотографию
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      //
+      z-index: -5;
+      overflow: hidden;
+    }
+
+    .comment-head-userinfo {
+      margin-left: 26px;
+      font-family: Montserrat, sans-serif;
+      font-weight: 600;
+
+      .comment-username {
+        color: #709FDC;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      .comment-data {
+        color: #BEBEBE;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .comment-body {
+
+    .comment-text {
+      color: #071739;
+      font-family: Montserrat, sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 140%;
+    }
+
+    .comment-actions {
+      margin-top: 39px;
+      display: flex;
+      align-items: center;
+
+      .comment-action {
+        margin-right: 15px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        span {
+          margin-right: 3px;
+          color: #071739;
+          font-family: Montserrat, sans-serif;
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 140%;
+
+          &.likes {
+            margin-top: 4px;
+          }
+
+
+        }
+        .liked {
+          color: #709FDC;
+        }
+      }
+
+      .comment-report {
+        cursor: pointer;
+      }
+    }
+  }
+}
