@@ -15,8 +15,8 @@
           </a>
         </div>
       </div>
-      <div class="blog-filters" (click)="toggleSorting()" [class.open]="sortingOpen">
-        <div class="blog-filters-head">
+      <div class="blog-filters" [class.open]="sortingOpen">
+        <div class="blog-filters-head" (click)="toggleSorting()">
           <span>Фильтр</span>
           <a>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">

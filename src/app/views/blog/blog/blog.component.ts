@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, HostListener, OnInit,} from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { environment } from '../../../../environments/environment';
@@ -31,11 +31,20 @@ export class BlogComponent implements OnInit {
   selectedCategories: string[] = [];
 
   constructor(
-    private articlesService: ArticlesService,
     private activatedRoute: ActivatedRoute,
+    private elementRef: ElementRef,
     private http: HttpClient,
     private router: Router
   ) { }
+
+
+  @HostListener('document:click', ['$event'])
+  onClick(event: MouseEvent) {
+    const targetElement = event.target as Element;
+    if (!this.elementRef.nativeElement.querySelector('.blog-filters').contains(targetElement) && !targetElement.classList.contains('span')) {
+      this.sortingOpen = false;
+    }
+  }
 
   ngOnInit(): void {
     this.activatedRoute.queryParams.subscribe((params: Params) => {
