@@ -1,1 +1,1 @@
-https://www.jojomb.ru
+https://www.jojombo.ru
